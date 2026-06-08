@@ -1,8 +1,8 @@
-console.log(
-  [15, 16, 17, 18, 19].reduce(
-    (accumulator, currentValue) => accumulator + currentValue,
-    10,
-  ),
+const objects = [{ x: 1 }, { x: 2 }, { x: 3 }];
+
+const sum = objects.reduce(
+  (accumulator, currentValue) => accumulator + currentValue.x,
+  0,
 );
 
-// Sum of values in an object array --> MDN
+console.log(sum);
