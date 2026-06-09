@@ -1,11 +1,7 @@
-const array = [
-  [0, 1],
-  [2, 3],
-  [4, 5],
-];
-
-const result = array.reduceRight((accumulator, currentValue) =>
-  accumulator.concat(currentValue),
+console.log(
+  [1, 2, 3, 4, 5].reduceRight(
+    (accumulator, currentValue, index, array) => accumulator + currentValue,
+  ),
 );
 
-console.log(result);
+// How reduceRight() works with an initial value -- MDN
