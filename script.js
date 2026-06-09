@@ -1,4 +1,9 @@
-console.log([1, 2, , 4].reduce((a, b) => a + b));
-console.log([1, 2, undefined, 4].reduce((a, b) => a + b));
+const arrayLike = {
+  length: 3,
+  0: 2,
+  1: 3,
+  2: 4,
+  3: 99,
+};
 
-// Calling reduce() on non-array objects -- MDN
+console.log(Array.prototype.reduce.call(arrayLike, (x, y) => x + y));
