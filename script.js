@@ -1,9 +1,11 @@
-const arrayLike = {
-  length: 3,
-  0: 2,
-  1: 3,
-  2: 4,
-  3: 99,
-};
+const array = [
+  [0, 1],
+  [2, 3],
+  [4, 5],
+];
 
-console.log(Array.prototype.reduce.call(arrayLike, (x, y) => x + y));
+const result = array.reduceRight((accumulator, currentValue) =>
+  accumulator.concat(currentValue),
+);
+
+console.log(result);
