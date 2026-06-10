@@ -1,14 +1,7 @@
-const sumOfTripledEvens = (array) => {
-  let sum = 0;
-  for (let i = 0; i < array.length; i++) {
-    // Step 1: If the element is an even number
-    if (array[i] % 2 === 0) {
-      // Step 2: Multiply this number by three
-      const tripledEvenNumber = array[i] * 3;
-
-      // Step 3: Add the new number to the total
-      sum += tripledEvenNumber;
-    }
-  }
-  return sum;
+const addOne = (num) => {
+  return num + 1;
 };
+
+const arr = [1, 2, 3, 4, 5];
+const mappedArr = arr.map(addOne);
+console.log(mappedArr); // Output: [2, 3, 4, 5, 6]
