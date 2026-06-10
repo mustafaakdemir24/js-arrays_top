@@ -1,15 +1,12 @@
-let army = {
-  minAge: 18,
-  maxAge: 27,
-  canJoin(user) {
-    return user.age >= this.minAge && user.age <= this.maxAge;
-  },
+const camelize = (str) => {
+  return str
+    .split("-")
+    .map((word, index) =>
+      index === 0 ? word : word.charAt(0).toUpperCase() + word.slice(1),
+    )
+    .join("");
 };
 
-let users = [{ age: 16 }, { age: 20 }, { age: 23 }, { age: 30 }];
-
-let soldiers = users.filter(army.canJoin, army);
-
-console.log(soldiers.length);
-console.log(soldiers[0].age);
-console.log(soldiers[1].age);
+console.log(camelize("background-color")); // returns 'backgroundColor'
+console.log(camelize("list-style-image")); // returns 'listStyleImage'
+console.log(camelize("-webkit-transition")); // returns 'WebkitTransition'
