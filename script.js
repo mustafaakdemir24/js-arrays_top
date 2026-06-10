@@ -1,12 +1,14 @@
-const camelize = (str) => {
-  return str
-    .split("-")
-    .map((word, index) =>
-      index === 0 ? word : word.charAt(0).toUpperCase() + word.slice(1),
-    )
-    .join("");
-};
+const sumOfTripledEvens = (array) => {
+  let sum = 0;
+  for (let i = 0; i < array.length; i++) {
+    // Step 1: If the element is an even number
+    if (array[i] % 2 === 0) {
+      // Step 2: Multiply this number by three
+      const tripledEvenNumber = array[i] * 3;
 
-console.log(camelize("background-color")); // returns 'backgroundColor'
-console.log(camelize("list-style-image")); // returns 'listStyleImage'
-console.log(camelize("-webkit-transition")); // returns 'WebkitTransition'
+      // Step 3: Add the new number to the total
+      sum += tripledEvenNumber;
+    }
+  }
+  return sum;
+};
