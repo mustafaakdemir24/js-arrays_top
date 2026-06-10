@@ -1,3 +1,9 @@
-console.log([1, 2, , 4].reduceRight((a, b) => a + b));
+const arrayLike = {
+  length: 3,
+  0: 2,
+  1: 3,
+  2: 4,
+  3: 99,
+};
 
-console.log([1, 2, undefined, 4].reduceRight((a, b) => a + b));
+console.log(Array.prototype.reduceRight.call(arrayLike, (x, y) => x - y));
