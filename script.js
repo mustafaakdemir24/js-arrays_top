@@ -1,9 +1,5 @@
-const arrayLike = {
-  length: 3,
-  0: 2,
-  1: 3,
-  2: 4,
-  3: 99,
-};
+let arr = [1, 2, 3, 4, 5];
 
-console.log(Array.prototype.reduceRight.call(arrayLike, (x, y) => x - y));
+let result = arr.reduce((sum, current) => sum + current, 0);
+
+console.log(result);
