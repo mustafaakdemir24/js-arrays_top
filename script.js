@@ -1,8 +1,8 @@
-const arr = [1, 2, 3, 4, 5];
+const sumOfTripledEvens = (array) => {
+  return array
+    .filter((num) => num % 2 === 0)
+    .map((num) => num * 3)
+    .reduce((acc, curr) => acc + curr, 0);
+};
 
-const sumOfTripledEvens = arr
-  .filter((num) => num % 2 === 0)
-  .map((num) => num * 3)
-  .reduce((acc, num) => acc + num, 0);
-
-console.log(sumOfTripledEvens);
+// Test-driven development -- The Odin Project
