@@ -1,4 +1,8 @@
 const arr = [1, 2, 3, 4, 5];
-const oddNums = arr.filter((num) => num % 2 !== 0);
-console.log(oddNums); // Output: [1, 3, 5]
-console.log(arr); // Output: [1, 2, 3, 4, 5]
+
+const sumOfTripledEvens = arr
+  .filter((num) => num % 2 === 0)
+  .map((num) => num * 3)
+  .reduce((acc, num) => acc + num, 0);
+
+console.log(sumOfTripledEvens);
