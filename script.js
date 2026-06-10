@@ -1,7 +1,6 @@
 console.log(
-  [1, 2, 3, 4, 5].reduceRight(
+  [0, 1, 2, 3, 4].reduceRight(
     (accumulator, currentValue, index, array) => accumulator + currentValue,
+    0,
   ),
 );
-
-// How reduceRight() works with an initial value -- MDN
