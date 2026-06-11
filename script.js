@@ -1,8 +1,12 @@
-const sumOfTripledEvens = (array) => {
-  return array
-    .filter((num) => num % 2 === 0)
-    .map((num) => num * 3)
-    .reduce((acc, curr) => acc + curr, 0);
+const camelize = (str) => {
+  return str
+    .split("-")
+    .map((word, index) =>
+      index === 0 ? word : word.charAt(0).toUpperCase() + word.slice(1),
+    )
+    .join("");
 };
 
-// Test-driven development -- The Odin Project
+console.log(camelize("background-color"));
+console.log(camelize("list-style-image"));
+console.log(camelize("-webkit-transition"));
