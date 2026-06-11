@@ -1,10 +1,5 @@
-const copySorted = (arr) => {
-  return arr.slice().sort();
-  // alternatively: return [...arr].sort()
-};
+let arr = [5, 2, 1, -10, 8];
 
-let arr = ["HTML", "JavaScript", "CSS"];
-let sorted = copySorted(arr);
+arr.sort((a, b) => b - a);
 
-console.log(sorted);
 console.log(arr);
