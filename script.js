@@ -1,12 +1,8 @@
-const camelize = (str) => {
-  return str
-    .split("-")
-    .map((word, index) =>
-      index === 0 ? word : word.charAt(0).toUpperCase() + word.slice(1),
-    )
-    .join("");
+const filterRange = (arr, a, b) => {
+  return arr.filter((num) => num >= a && num <= b);
 };
 
-console.log(camelize("background-color"));
-console.log(camelize("list-style-image"));
-console.log(camelize("-webkit-transition"));
+let arr = [5, 3, 8, 1];
+
+console.log(filterRange(arr, 1, 4));
+console.log(arr);
