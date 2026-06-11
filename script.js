@@ -1,15 +1,10 @@
-const filterRangeInPlace = (arr, a, b) => {
-  for (let i = 0; i < arr.length; i++) {
-    if (arr[i] < a || arr[i] > b) {
-      arr.splice(i, 1);
-      i--;
-    }
-  }
-  return arr;
+const copySorted = (arr) => {
+  return arr.slice().sort();
+  // alternatively: return [...arr].sort()
 };
 
-let arr = [5, 3, 8, 1];
+let arr = ["HTML", "JavaScript", "CSS"];
+let sorted = copySorted(arr);
 
-console.log(filterRangeInPlace(arr, 1, 4));
-
+console.log(sorted);
 console.log(arr);
