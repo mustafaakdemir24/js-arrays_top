@@ -1,16 +1,16 @@
-// Fisher - Yates (Lmitj) algorithm
-const suffleArray = (array) => {
-  for (let i = array.length - 1; i > 0; i--) {
-    let j = Math.floor(Math.random() * (i + 1));
-    [array[i], array[j]] = [array[j], array[i]];
-  }
-  return array;
+const unique = (arr) => {
+  return arr.filter((item, index) => arr.indexOf(item) === index);
 };
 
-let arr = new Array(1, 2, 3);
+let strings = [
+  "Hare",
+  "Krishna",
+  "Hare",
+  "Krishna",
+  "Krishna",
+  "Krishna",
+  "Hare",
+  ":-0",
+];
 
-console.log(suffleArray(arr));
-console.log(suffleArray(arr));
-console.log(suffleArray(arr));
-
-// Assignment -- Filter unique array members --> The Odin Project
+console.log(unique(strings));
